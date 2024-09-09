@@ -1,0 +1,9 @@
+services:
+ api:
+  build:
+   context: .
+   target: production
+
+  ports:
+   - 3000:3000
+  command: sh -c "ls -al dist && node dist/index.js"
